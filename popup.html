@@ -27,7 +27,6 @@
     }
   </style>
   <!--конец объяснения блока со стилями-->
-  <script src="popup.js"></script>
 </head>
 <!--объяснение тега <body>-->
 <body>
@@ -70,27 +69,6 @@
     <p>"Какой ГОСТ чаще всего используют в списке использованных источников научной статьи?": <br>ГОСТ Р7.0.5-2008</p>
   </div>
   <!--Конец контейнера-->
-
-  <script>
-    var moved=false;
-    function dragObject(e){
-        e.dataTransfer.effectAllowed="move";
-        e.dataTransfer.setData("obj1", e.target.id);
-        return false;
-    }
-    function dropObject(e){
-        if(moved==true){
-        return false;
-        }
-        var received=e.dataTransfer.getData("obj1");
-        e.dataTransfer.dropEffect="move";
-        e.preventDefault();
-        e.stopPropagation();
-        e.target.appendChild(document.getElementById(received));
-        moved=true;
-        return false;
-    }
-    </script>
 </body>
 
 </html>
