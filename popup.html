@@ -1,142 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Traversy Media Quick Launcher</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
-    <style>
-      /* Modal Structure */
+<!--Начало первого блока объяснения кода-->
+<head>
+  <meta charset="utf-8">
+  <title>Google Переводчик</title>
+  <!--ссылаемся на шрифты, используемые в документе-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <!--здесь мы ссылаемся на стили, которые будем использовать в документе, а именно стиль иконок-->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+    <!--начало блока со стилями для страницы-->
+  <style>
+    /* Модальная структура документа */
+    /*общие настройки для всего документа*/
+    html,
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 11px;
+      margin: 0;
+      max-height: 100px;
+      padding: 0;
+      width: 300px;
+    }
+    .modal-content {
+      padding: 0 8px; /*отступы сверху и снизу, сверху и слева*/
+    }
+  </style>
+  <!--конец объяснения блока со стилями-->
+  <script src="popup.js"></script>
+</head>
+<!--объяснение тега <body>-->
+<body>
+  <!--контейнер, содержащий описание функций расширения-->
+  <div class="modal-content">
+    <p>"Выбрать правильное определение науки": <br>выработка и теоретическая систематизация объективных знаний о действительности</p>
+    <p>"Выбрать науку, относящуюся к практическим наукам": <br>медицина</p>
+    <p>"Наука относится к области": <br>нет правильного ответа</p>
+    <p>"Система взглядов, направлений действий, получивших нормативный характер посредством утверждения каким-либо официальным органом – это": <br>доктрина</p>
+    <p>"Существенное, объективное, всеобщее, устойчивое повторяющееся отношение между явлениями, процессами – это": <br>закон</p>
+    <p>"Форма достоверного научного знания о совокупности объектов, представляющая собой систему взаимосвязанных утверждений и доказательств и содержащая методы объяснения и предсказания явлений и процессов данной предметной области – это": <br>теория</p>
+    <p>"Логическая структура научной деятельности содержит": <br>методы</p>
+    <p>"Из методов научного познания выбрать теоретический метод операции": <br>формализация</p>
+    <p>"Из методов научного познания выбрать теоретический метод действия": <br>доказательство</p>
+    <p>"Из методов научного познания выбрать эмпирический метод действия": <br>эксперимент</p>
+    <p>"Определенный уровень соответствия, создаваемого с помощью полученной информации образа реальному объекту, процессу, явлению и т.д. – это": <br>адекватность</p>
+    <p>"Отметить науку “слабой” версии": <br>экономика</p>
+    <p>"Выбрать правильное определение методологии": <br>учение о методах и процедурах научной деятельности, а также раздел теории научного познания</p>
+    <p>"Что такое исследование?": <br>процесс выработки новых научных знаний</p>
+    <p>"Правильность отбора информации в целях адекватного отражения свойств объекта – это": <br>репрезентативность</p>
+    <p>"Определенный уровень соответствия создаваемого с помощью полученной информации образа реальному объекту, процессу, явлению и т.д. – это": <br>адекватность</p>
+    <p>"Выявление скрытых, неявных смыслов авторского текста – это … метод обработки информации": <br>герменевтический</p>
+    <p>"Что является важнейшей частью композиционного построения и оформления научной работы?": <br>введение</p>
+    <p>"Что такое монография?": <br>научный труд, в котором освещается одна тема, проблема</p>
+    <p>"Публичное сообщение, развернутое изложение какой-либо темы, рассчитанное на специалистов данной области – это": <br>научный доклад</p>
+    <p>"Выберите правильную временную последовательность фаз реализации научного проекта": <br>проектирования технологическая рефлексивная</p>
+    <p>"Выбрать критерии научности знания": <br>-истинность; <br>-интерсубъективность; <br>-системность</p>
+    <p>"В научном знании закон – это": <br>нет верного ответа</p>
+    <p>"Выбрать нормы научной этики": <br>-социальная ответственность; <br>-бескорыстность; <br>-беспристрастность</p>
+    <p>"Результат теоретического исследования должен отвечать следующим критериям оценки достоверности": <br>-интерпретируемость; <br>-проверяемость; <br>-предметность</p>
+    <p>"Результат эмпирического исследования должен отвечать следующим критериям оценки достоверности": <br>-адекватность; <br>-нейтральность; <br>-объективность</p>
+    <p>"Существенными признаками модели являются": <br>-адекватность; <br>-абстракция; <br>-наглядность</p>
+    <p>"В какой части статьи чаще всего используется обобщение": <br>заключении</p>
+    <p>"Валидность – это": <br>обоснованность и пригодность применения методик и результатов исследования в конкретных условиях</p>
+    <p>"Выбрать относящееся к Journal Citation Reports (JCR)": <br>-интегрирована в поисковую платформу Web of Science; <br>-ежегодная публикация компании Clarivate Analytics; <br>-интеллектуальная собственность бизнес-компании Томас Рейтер; <br>-самостоятельная услуга</p>
+    <p>"Доступен ли поиск индекса Хирша зарубежных ученых в Web of Science с домашнего компьютера": <br>нет</p>
+    <p>"Доступен ли поиск SJR журнала в базе Scopus": <br>да</p>
+    <p>"Возможен ли поиск в e-library публикаций, по ключевым словам, без регистрации": <br>да</p>
+    <p>"Выберите относящееся к ресурсу sci-hub": <br>-нелегитимный; <br>-устраняющий преграды на пути научных знаний; <br>-блокируемый</p>
+    <p>"Какой ГОСТ чаще всего используют в списке использованных источников научной статьи?": <br>ГОСТ Р7.0.5-2008</p>
+  </div>
+  <!--Конец контейнера-->
 
-      html,
-      body {
-        font-family: "Open Sans", sans-serif;
-        font-size: 14px;
-        margin: 0;
-        min-height: 180px;
-        padding: 0;
-        width: 384px;
-      }
+  <script>
+    var moved=false;
+    function dragObject(e){
+        e.dataTransfer.effectAllowed="move";
+        e.dataTransfer.setData("obj1", e.target.id);
+        return false;
+    }
+    function dropObject(e){
+        if(moved==true){
+        return false;
+        }
+        var received=e.dataTransfer.getData("obj1");
+        e.dataTransfer.dropEffect="move";
+        e.preventDefault();
+        e.stopPropagation();
+        e.target.appendChild(document.getElementById(received));
+        moved=true;
+        return false;
+    }
+    </script>
+</body>
 
-      h1 {
-        font-family: "Menlo", monospace;
-        font-size: 22px;
-        font-weight: 400;
-        margin: 0;
-        color: #2f5876;
-      }
-
-      a:link,
-      a:visited {
-        color: #000000;
-        outline: 0;
-        text-decoration: none;
-      }
-
-      img {
-        width: 30px;
-      }
-
-      .modal-header {
-        align-items: center;
-        border-bottom: 0.5px solid #dadada;
-      }
-
-      .modal-content {
-        padding: 0 22px;
-      }
-
-      .modal-icons {
-        border-top: 0.5px solid #dadada;
-        height: 50px;
-        width: 100%;
-      }
-
-      .logo {
-        padding: 16px;
-      }
-
-      .logo-icon {
-        vertical-align: text-bottom;
-        margin-right: 12px;
-      }
-
-      .version {
-        color: #444;
-        font-size: 18px;
-      }
-
-      .flex-container {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 22px;
-      }
-
-      .flex {
-        opacity: 1;
-        transition: opacity 0.2s ease-in-out;
-        width: 120px;
-      }
-
-      .flex:hover {
-        opacity: 0.4;
-      }
-
-      .flex .fa {
-        font-size: 40px;
-        color: #2f5876;
-      }
-    </style>
-    <script src="popup.js"></script>
-  </head>
-
-  <body>
-    <div class="modal-header">
-      <h1 class="logo">
-        <img class="logo-icon" src="images/traversy-logo.png" />Traversy
-        Launcher
-        <span class="version">(1.0.0)</span>
-      </h1>
-    </div>
-    <div class="modal-content">
-      <p>Easily Access Traversy Media content</p>
-    </div>
-    <div class="modal-icons">
-      <div class="flex-container">
-        <div class="flex">
-          <a href="https://www.traversymedia.com" target="_blank">
-            <i class="fa fa-globe" style="color:darksalmon "></i>
-          </a>
-        </div>
-        <div class="flex">
-          <a href="https://www.youtube.com/traversymedia" target="_blank">
-            <i class="fa fa-youtube" style="color:darksalmon "></i>
-          </a>
-        </div>
-        <div class="flex">
-          <a href="https://www.twitter.com/traversymedia" target="_blank">
-            <i class="fa fa-twitter" style="color:darksalmon "></i>
-          </a>
-        </div>
-        <div class="flex">
-          <a href="https://www.facebook.com/traversymedia" target="_blank">
-            <i class="fa fa-facebook" style="color:darksalmon "></i>
-          </a>
-        </div>
-        <div class="flex">
-          <a href="https://www.github.com/bradtraversy" target="_blank">
-            <i class="fa fa-github" style="color:darksalmon "></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </body>
 </html>
